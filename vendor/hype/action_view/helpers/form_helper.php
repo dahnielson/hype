@@ -2,12 +2,17 @@
 /**
  * FormHelper
  *
+ * Template tags related to HTML forms.
+ *
  * @author Anders Dahnielson <anders@dahnielson.com>
  * @copyright Anders Dahnielson 2006
  * @package Hype
  * @subpackage ActionViewHelpers
  */
 
+/**
+ * <?tpl form name="foobar" controller="mycontroller" action="myaction" method="post" ?>
+ */
 function hype_tpl_start_form_tag($args, &$tpl)
 {
 	$base = REWRITEBASE;
@@ -23,6 +28,9 @@ function hype_tpl_start_form_tag($args, &$tpl)
 
 $view->register_function('form', 'hype_tpl_start_form_tag');
 
+/**
+ * <?tpl /form ?>
+ */
 function hype_tpl_end_form_tag($args, &$tpl)
 {
 	return '</form>';
@@ -30,6 +38,9 @@ function hype_tpl_end_form_tag($args, &$tpl)
 
 $view->register_function('/form', 'hype_tpl_end_form_tag');
 
+/**
+ * <?tpl text_field name="foo[bar]" value="somevalue" ?>
+ */
 function hype_tpl_text_field($args, &$tpl)
 {
 	$id = str_replace(array('[', ']'), array('_', ''), $args['name']);
@@ -41,6 +52,9 @@ function hype_tpl_text_field($args, &$tpl)
 
 $view->register_function('text_field', 'hype_tpl_text_field');
 
+/**
+ * <?tpl submit name="foobar" value="somevalue" ?>
+ */
 function hype_tpl_submit($args, &$tpl)
 {
 	$id = $args['name'];

@@ -1,0 +1,11 @@
+<refentry id="{@id}">
+  <refnamediv>
+    <refname>Welcome to Hype!</refname>
+    <refpurpose>The hypodermic injection to all things Web 2.0.</refpurpose>
+  </refnamediv>
+  <refsynopsisdiv>
+    <author>
+      Anders Dahnielson
+    </author>
+  </refsynopsisdiv>
+</refentry>

@@ -35,6 +35,11 @@ class ActionRouter
 
 	function ActionRouter()
 	{
+		ActionRouter::__construct();
+	}
+
+	function __construct()
+	{
 		$this->_routes = array();
 
 		$this->_search = array(

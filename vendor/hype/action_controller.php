@@ -22,10 +22,15 @@ class ActionController
 	var $_globals = array();
 	/**#@-*/
 
+	function ActionController()
+	{
+		ActionController::__construc();
+	}
+
 	/**
 	 * The constructor calls the requested action.
 	 */
-	function ActionController()
+	function __construct()
 	{
 		if ( !method_exists($this, $GLOBALS['map']->action) )
 			redirect_to_404();
@@ -116,10 +121,6 @@ class ActionController
 		elseif ($label == 'resource')
 		{
 			$data['resource'] = $GLOBALS['map']->resource;
-		}
-		elseif ($label == 'query')
-		{
-			$data = $_GET;
 		}
 		elseif (array_key_exists($label, $_POST))
 		{

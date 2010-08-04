@@ -1,0 +1,16 @@
+INSTALL for Hype
+
+
+Installation
+------------
+
+After unpacking or checking out the sourcetree:
+
+1) Install the third-party libraries 'adodb_lite', 'Compat' and 'Smarty' 
+   in the 'vendor' directory.
+
+2) Rename 'config/database-example.php' to 'database.php' and edit 
+   the settings.
+
+3) Optionaly, rename 'config/ftpsync-example.cfg' to 'ftpsync.cfg' 
+   and edit the settings.

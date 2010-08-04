@@ -16,6 +16,11 @@ if (class_exists("Smarty"))
 	{
 		function ActionViewBase()
 		{
+			ActionViewBase::__construct();
+		}
+
+		function __construct()
+		{
 			$this->Smarty();
 		}
 	}
@@ -28,6 +33,11 @@ else if (class_exists("Template_Lite"))
 	class ActionViewBase extends Smarty
 	{
 		function ActionViewBase()
+		{
+			ActionViewBase::__construct();
+		}
+
+		function __construct()
 		{
 			$this->Smarty();
 		}
@@ -42,6 +52,11 @@ else
 	{
 		function ActionViewBase()
 		{
+			ActionViewBase::__construct();
+		}
+
+		function __construct()
+		{
 			die("No template class present!");
 		}
 	}
@@ -55,6 +70,11 @@ else
 class ActionView extends ActionViewBase
 {
 	function ActionView()
+	{
+		ActionView::__construct();
+	}
+
+	function __construct()
 	{
 		$this->ActionViewBase();
     

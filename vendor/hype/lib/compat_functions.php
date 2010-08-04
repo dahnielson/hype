@@ -8,10 +8,16 @@
  * @subpackage HypeFunctions
  */
 
+/**
+ * @ignore
+ */
 include('Compat/Function/array_intersect_key.php');
 
 if(!function_exists('str_split'))
-{ 
+{
+	/**
+	 * @ignore
+	 */
 	function str_split($string, $split_length=1) { 
 		$count = strlen($string);  
 		if ($split_length < 1)
@@ -37,6 +43,9 @@ if(!function_exists('str_split'))
 
 if (!function_exists('http_build_query')) 
 {
+	/**
+	 * @ignore
+	 */
 	function http_build_query( $formdata, $numeric_prefix = null, $key = null ) {
 		$res = array();
 		foreach ((array)$formdata as $k=>$v) 

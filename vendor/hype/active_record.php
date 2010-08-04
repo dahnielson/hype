@@ -12,5 +12,15 @@
  *
  * @package Hype
  */
-class ActiveRecord {}
+class ActiveRecord
+{
+	function ActiveRecord()
+	{
+		ActiveRecord::__construct();
+	}
+
+	function __construct()
+	{
+	}
+}
 ?>

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Application  " $(wc --lines $(find app/ -name "*.php") | grep total)
+echo "Hype         " $(wc --lines $(find vendor/hype/ -name "*.php") | grep total)

@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Syncing, please wait..."
+
+if [ -n "$1" ] ; then
+    CFG_FILE="ftpsync-$1.cfg"
+else
+    CFG_FILE="ftpsync.cfg"
+fi
+
+${0%/*}/../vendor/hype/ftpsync -p -q -c \
+	cfg=${0%/*}/../config/$CFG_FILE \
+	${0%/*}/..

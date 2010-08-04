@@ -1,0 +1,41 @@
+README for Hype
+
+
+Design Requirement
+------------------
+
+Hype was design with a set of requirements in mind:
+
+* Must run on PHP4 (>=4.4.2)
+* Must run in Safe Mode
+* Can not rely on PEAR
+
+The primary reason for them are the limitation my current host impose 
+on the project.
+
+
+Third-party libraries
+---------------------
+
+To use Hype you need to install a couple of third-party libraries in the
+'vendor/' directory. They are:
+
+* adodb_lite (from http://adodblite.sourceforge.net)
+* Compat (from http://pear.php.net/package/PHP_Compat)
+* Smarty (from http://smarty.php.net)
+
+
+Coding Standard
+---------------
+
+Options can be stored and passed around in two different formats:
+
+$params
+
+  Params are options formated as query strings, they're build with the 
+  build_params() function from associative arrays and parsed back into arrays
+  with the parse_params() function.
+
+$args
+
+  Args are options formated as associative arrays.
